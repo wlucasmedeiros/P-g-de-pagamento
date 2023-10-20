@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de pagamento</title>
+  <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="containerCard">
+        <div class="cardFront">
+          <img src="img/bg-card-front.png" alt="Cartão parte frontal">
+          <div class="imgCard"></div>
+          <div class="imgCardSmall"></div>
+          <p id="cardNumber">0000 0000 0000 0000</p>
+          <p id="cardName">italo nunes</p>
+          <p id="cardVal">00/00</p>
+        </div>
+        <div class="cardBack">
+          <img src="img/bg-card-back.png" alt="Cartão parte traseira">
+          <p id="numberCvc">000</p>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <form>
+        <fieldset>
+          <label>
+            Nome do titular
+            <input type="text" name="nameCard" id="nameCard" placeholder=" Italo Nunes" required>
+          </label>
+          <label>
+            Número do Cartão
+            <input type="number" name="numberCard" id="numberCard" required placeholder=" 1234 5678 9123 0000">
+          </label>
+          <div class="containerWrap">
+            <label>
+              Data de expiração (mm/yy)
+              <div class="valNumbers">
+                <input type="number" name="monthNumber" id="monthNumber" required placeholder="mm" oninput="concatenaValidade()">
+                <input type="number" name="yearNumber" id="yearNumber" required placeholder="yy" oninput="concatenaValidade()">
+              </div>
+            </label>
+            <label>
+              cvc
+              <input type="number" name="cvcNumber" id="cvcNumber" required placeholder=" 123">
+            </label>
+          </div>
+        </fieldset>
+        <button type="submit" id="btnSubmit">Confirm</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
